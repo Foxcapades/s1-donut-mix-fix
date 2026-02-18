@@ -7,3 +7,5 @@
 !makefile
 !readme.adoc
 !.gitignore
+
+*.user
