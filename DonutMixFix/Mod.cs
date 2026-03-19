@@ -1,8 +1,14 @@
 using HarmonyLib;
+using MelonLoader;
+#if IL2CPP
 using Il2CppScheduleOne.Effects;
 using Il2CppScheduleOne.Product;
 using Il2CppSystem.Collections.Generic;
-using MelonLoader;
+#elif MONO
+using ScheduleOne.Effects;
+using ScheduleOne.Product;
+using System.Collections.Generic;
+#endif
 
 [assembly: MelonInfo(typeof(DonutMixFix.Mod), "DonutMixFix", "1.0.0", "Foxcapades")]
 [assembly: MelonGame("TVGS", "Schedule I")]

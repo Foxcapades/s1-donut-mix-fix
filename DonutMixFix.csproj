@@ -15,23 +15,42 @@
 
   <ItemGroup Condition="'$(Configuration)'=='IL2Cpp'">
     <Reference Include="Harmony">
-      <HintPath>$(MelonIL2CppPath)/net6/0Harmony.dll</HintPath>
+      <HintPath>$(MelonPath)/0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Il2CppInterop.Runtime">
-      <HintPath>$(MelonIL2CppPath)/net6/Il2CppInterop.Runtime.dll</HintPath>
+      <HintPath>$(MelonPath)/Il2CppInterop.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="MelonLoader">
-      <HintPath>$(MelonIL2CppPath)/net6/MelonLoader.dll</HintPath>
+      <HintPath>$(MelonPath)/MelonLoader.dll</HintPath>
     </Reference>
 
     <Reference Include="Assembly-CSharp">
-      <HintPath>$(MelonIL2CppPath)/Il2CppAssemblies/Assembly-CSharp.dll</HintPath>
+      <HintPath>$(AssembliesPath)/Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Il2Cppmscorlib">
-      <HintPath>$(MelonIL2CppPath)/Il2CppAssemblies/Il2Cppmscorlib.dll</HintPath>
+      <HintPath>$(AssembliesPath)/Il2Cppmscorlib.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>$(MelonIL2CppPath)/Il2CppAssemblies/UnityEngine.dll</HintPath>
+      <HintPath>$(AssembliesPath)/UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(Configuration)'=='Mono'">
+    <Reference Include="Harmony">
+      <HintPath>$(MelonPath)/0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="MelonLoader">
+      <HintPath>$(MelonPath)/MelonLoader.dll</HintPath>
+    </Reference>
+
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(AssembliesPath)/Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>$(AssembliesPath)/mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(AssembliesPath)/UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>
