@@ -10,12 +10,13 @@ using ScheduleOne.Product;
 using System.Collections.Generic;
 #endif
 
-[assembly: MelonInfo(typeof(DonutMixFix.Mod), "DonutMixFix", "1.0.0", "Foxcapades")]
+[assembly: MelonInfo(typeof(DonutMixFix.Mod), DonutMixFix.Mod.MOD_NAME, "1.0.0", "Foxcapades")]
 [assembly: MelonGame("TVGS", "Schedule I")]
 
 namespace DonutMixFix {
   [HarmonyPatch(typeof(EffectMixCalculator), nameof(EffectMixCalculator.MixProperties))]
   public class Mod: MelonMod {
+    public const string MOD_NAME = "DonutMixFix";
     private const string CalorieDenseEffectID = "caloriedense";
 
     // Sets __state to true if we are adding Explosive, and Calorie-Dense is
